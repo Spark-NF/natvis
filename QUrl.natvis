@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+
+    <Type Name="QUrl">
+        <!-- Query string + Fragment -->
+        <DisplayString Condition="reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 48)->d->size &amp;&amp; reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 56)->d->size">{*reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 8)}://{*reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 32)}{*reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 40)}?{*reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 48)}#{*reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 56)}</DisplayString>
+        <!-- Query string -->
+        <DisplayString Condition="reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 48)->d->size">{*reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 8)}://{*reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 32)}{*reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 40)}?{*reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 48)}</DisplayString>
+        <!-- Fragment -->
+        <DisplayString Condition="reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 56)->d->size">{*reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 8)}://{*reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 32)}{*reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 40)}#{*reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 56)}</DisplayString>
+        <!-- Default -->
+        <DisplayString>{*reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 8)}://{*reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 32)}{*reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 40)}</DisplayString>
+
+        <!-- Expansion of QUrlPrivate members -->
+        <Expand>
+            <Item Name="[scheme]">*reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 8)</Item>
+            <Item Name="[username]">*reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 16)</Item>
+            <Item Name="[password]">*reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 24)</Item>
+            <Item Name="[host]">*reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 32)</Item>
+            <Item Name="[path]">*reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 40)</Item>
+            <Item Name="[query]">*reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 48)</Item>
+            <Item Name="[fragment]">*reinterpret_cast&lt;QString*&gt;(reinterpret_cast&lt;char*&gt;(d) + 56)</Item>
+        </Expand>
+    </Type>
+
+</AutoVisualizer>
